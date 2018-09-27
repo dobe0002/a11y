@@ -1,0 +1,17 @@
+.card{
+    margin-top:50px;
+    margin-bottom:20px;
+
+    a{
+        color: #ffdfd7;
+        border-bottom-color:rgba( #ffdfd7, .5);
+        &:hover{
+            border-bottom-color:rgba( #ffdfd7, 1);
+        }
+    }
+}
+
+
+.modal{
+    color:#222;
+}

@@ -1,0 +1,31 @@
+mixin fa(type, extraClasses, title,faType)
+    - faType = faType || 'fas'
+    - extraClasses = extraClasses || ''
+    - t = title || ''
+    - var c=faType+' fa-'+type+' '+extraClasses
+    i(class= c title= t)
+
+mixin fab(type,extraClasses,title)
+    +fa(type,extraClasses,title,'fab')
+
+mixin github(href, extraClasses)
+    - extraClasses = extraClasses || ''
+    a(href= href target="_blank" class= extraClasses)
+        block
+        | 
+        +fa('github',extrClasses,'on Github','fab')
+
+mixin externalLink(href, extraClasses)
+    - extraClasses = extraClasses || ''
+    a(href= href target="_blank" class= extraClasses)
+        block
+        | 
+        +fa('external-link',extraClasses,'(new window)')
+
+
+mixin googleLink(href,extraClasses)
+     - extraClasses = extraClasses || ''
+      a(href= href target="_blank" class= extraClasses)
+        block
+        | 
+        +fab('google-drive',extraClasses,'(Google Doc)')

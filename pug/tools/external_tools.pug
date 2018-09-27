@@ -1,0 +1,77 @@
+extends ../templates/landing.pug
+
+block title
+    |External Tools
+block head
+
+block breadCrumbs
+    +breadcrumbToolsPage External Tools
+
+block icon
+    +fa('wrench', 'fa-5x')
+block intro
+    p.
+        There are many tools and helpers outline.  Below are a few that I use on a regular basis.
+
+block content
+   
+   h2 Browser Plugins/Add-ons/Extensions
+    h3 Automated checking
+    p.
+        Tools that check for a wide variety of issues.
+    ul
+        li
+            +externalLink("https://ainspector.github.io/")
+                |AInspector (Firefox) 
+                +fa("asterisk",'', "(requires Firefox ESR)")
+                
+        li
+            +externalLink("http://wave.webaim.org/extension/")
+                |WAVE (Chrome and Firefox) 
+        li
+            +externalLink("https://www.deque.com/products/axe/")
+                |aXe (Chrome and Firefox) 
+
+    h3 Specific issue checking
+    p.
+        Used for manual checks.
+    ul
+        li
+            +externalLink("http://wave.webaim.org/extension/")
+                |WAVE (Chrome and Firefox) 
+        li
+            +externalLink("http://blrichwine.github.io/W15yQC/")
+                |W15YQC (Firefox) 
+                +fa("asterisk",'', "(requires Firefox ESR)")
+        li
+            +externalLink("https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph")
+                |High Contrast (Chrome)
+        li
+            +externalLink("https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl/related")
+                |No Coffee Vision Simulator (Chrome)
+        li
+            +externalLink("https://chrome.google.com/webstore/detail/colora11y/icfneoldcbdmgaiocnnobpbbjncdfbfb")
+                |ColorA11y (Chrome)
+        li
+            +externalLink("https://chrispederick.com/work/web-developer/")
+                |Web Developer Toolbar (Chrome and Firefox) 
+        li
+            +externalLink("https://chrome.google.com/webstore/detail/contrast-ratio-checker/kmicfegjejpginnockfnjpdgeffebdcf?hl=en")
+                |Contrast Ratio Checker (Chrome)
+
+    h2 Unit testing
+    ul
+        li
+            +externalLink('https://axe-core.org/examples/') aXe-Core
+
+    h2 Notes
+    ul.list-unstyled
+        li 
+            +fa("asterisk",'', "(requires Firefox ESR)")
+            | = Requires the 
+            +externalLink("https://www.mozilla.org/en-US/firefox/organizations/")
+                | ESR (pre verison 57) version of Firefox
+
+
+block extraCode
+            

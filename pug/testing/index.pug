@@ -1,0 +1,77 @@
+extends ../templates/landing.pug
+
+block title
+    |Testing
+block head
+
+block breadCrumbs
+    +breadcrumbToolsPage
+
+block icon
+    +fa('eye', 'fa-5x')
+block intro
+    p.
+        You can't fix issues if you can't find them.  Ensuring that all members of a project team - from customer to developer, can efficiently test for major accessibility is a key to insuring an accessible product. 
+    p.  
+        Here are Kim's approach to accessibility testing and supporting documents. 
+
+block content
+
+    h2 Approach
+    p I have found that many people think or feel that accessibility testing is overly complex, "squishy", subjective, or too technical.  Many folks feel like it takes large amount of time.  Between feeling like it is "too hard", "too technical", and takes "too much time" many folks don't even attempt to try testing.   This a problem because if approached the correct way and testing at the right level, anyone can easily (and should) do some level of testing.
+
+    p The first step is to keep it simple and keep it concrete.  If folks find that testing can be straight forward, easy, and relatively quick, they are more willing to do it.  This may mean that some of the more nuanced items might be skipped, but some accessibility testing is a whole heck of a lot better than no testing.  Once folks have the confidence with the basics, then they can move on to more difficult testing.
+
+    p In an effort to keep testing concrete and easy, I do not focus on the WCAG 2.1 success criteria because the text is confusing and vague and requires a deeper background to understanding what each success criteria actually means.  In the end, accessibility means insuring that all users can consume and interact with your web page or application.  Focusing on end users instead of success criteria and/or standards, makes us focus on who is actually using our web page and application.
+
+    h2 Why testing
+    p  I spend a lot of time teaching folks the "how" of web accessibility.  I did presentation after presentation on how to code headings, enter alt text for images, etc. but it didn't make web sites or applications more accessible.  When I was pondering this fact, a good friend of mine said "I cant' fix it if I cant' find it!"  By not teaching all team members how to test for accessibility, it never receives focus or attention. Items aren't found so they aren't fixed. There isn't a second (or third) "set of eyes" insuring accessibility.  Accessibility isn't put into the project timeline.  
+
+    h2 Everyone should test
+    p To insure that accessibility receives attention, is insured, and time is alloted for it, I highly encourage EVERYONE to learn how to do some level of testing, even if just how to run a WAVE report.  Accessibility should not be seen as a "techy" or developer thing, but as a project thing.
+
+    hr 
+    h2 Documents
+
+    h3 Process
+    p Help change team culture, attitudes, or process to incorporate accessibility.
+    ul
+        li
+            +googleLink('https://z.umn.edu/KKD-DevOps-2018') Accessibility - A team approach
+
+    hr
+    h3 Quick start guides
+    p Focused documents to learn or practice a new testing skill.
+    ul
+        li 
+            +googleLink('https://z.umn.edu/kkd-a11y-wave') Quick-start guide to WAVE 
+        li
+            +googleLink('https://z.umn.edu/kkd-a11y-forms') Quick-start guide to HTML forms
+
+    hr
+    h3 Complete testing guide
+    p. 
+        I call  this the "master document" because it contains information on how to test for all areas of a web site or web application.  
+        Teams should pick out the items in this document that they need.
+    ul 
+        li
+            +googleLink('https://z.umn.edu/kkd-a11y-testing') Web accessibility testing (master document)
+
+        li
+            +externalLink(' https://z.umn.edu/kkd-a11y-testing-site') Website to practice your accessibility testing skills.
+
+    p  You don't need to understand or look at code to complete the testing outlined in the document.  Everyone can test!  No really they can.
+
+    hr
+    h3 Reporting spreadsheet
+    p When you are ready to do some in depth testing, a good spreadsheet is needed.  Ideally it should be able to list the pages a particular accessibility issues has been found AND list all accessibility issues found an a particular page.  This is a heavy task for a spreadsheet all while making issue entry quick and easy.
+
+    ul
+        li
+            +googleLink("https://z.umn.edu/kkd-a11y-test-template") Accessibility Issues template
+
+        li
+            +googleLink("https://docs.google.com/spreadsheets/d/1mHI6sNhYxTTvtp2UYmZPucJdVHW1p856JBKaDCBFBoU/edit#gid=1852119205") Sample Accessibility Audit
+
+
+block extraCode

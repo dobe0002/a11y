@@ -1,0 +1,71 @@
+extends templates/main.pug
+
+
+block title
+    |Home
+
+block head
+    style.
+        .blog{
+            text-align:center;
+            margin-top:40px;
+            /* border-top: 1px solid #404040; */
+
+
+        }
+
+block breadCrumbs
+
+block contentContainer
+    .row
+        .col
+            .card.cardHome
+                .card-body.row
+                    .col
+                        p.h1(style='margin-bottom:0') Hello.
+                        p.tag Life is hard, the web should not be.
+                        
+                        h1.h5(style='margin-top:0') Web accessibility  for everyone.
+                        p Collection of web accessibility items created by Kim Doberstein.
+                       
+    .row.homepagecols
+        .col
+            h2 Presentations
+            p Don't go it alone.  View presentation information and handouts from Kim's accessibility sessions.
+            p.button-row
+                a.btn.btn-primary(href="presentations/index.html")
+                    +fa('chalkboard-teacher')
+                    | Presentations
+        .col
+            h2 Testing
+            p Fixing accessibility issues is much easier once you have found the issues. 
+            p.button-row
+                a.btn.btn-secondary(href="testing/index.html")
+                    +fa('eye')
+                    | Testing
+
+        .col
+            h2 Code
+            p No need to reinvent the wheel.    See Kim's accessible code snippets.
+            p.button-row
+                a.btn.btn-secondary(href="code/index.html")
+                    +fa('code')
+                    | Code samples
+        .col
+            h2 Documents
+            p.
+                Gear up to achieve your accessibility goals.  Collection of Kim's favorite documents and helpers.
+
+            p.button-row
+                a.btn.btn-secondary(href="tools/index.html")
+                    +fa('book')
+                    | Documents
+//-
+    .row.blog
+        .col
+            h2.sr-only Blog
+            p
+                a.btn.btn-secondary(href="")
+                    +fa('lightbulb')
+                    | Kim's Blog
+                

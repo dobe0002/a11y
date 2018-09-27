@@ -1,0 +1,30 @@
+extends ../templates/code_embed.pug
+
+block title
+    |Bootstrap 4 Tooltips
+block head
+
+
+block intro
+    p.
+        Out of the box, Bootstrap 4 tooltips are not compliant with WCAG 2.0.  This jQuery based script fixes these issues.
+    
+block content
+    h2 Description
+    p According to 
+        a(href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html") WCAG 2.1, success criteria 1.4.13
+        |, tooltips must stay open if a user hovers over the top of the tooltip.  In addition, the user must be able to hide the tooltip without moving the mouse or changing focus.
+
+    h2 Requirements
+    ul
+        li Bootstrap 4 JavaScript
+        li PooperJS
+        li Bootstrap 4 CSS
+        li jQuery
+
+    h2 CodePen example:
+    p.codepen(data-height='510', data-theme-id='dark', data-slug-hash='mGQWqJ', data-default-tab='js,result', data-user='kimdobie', data-pen-title='Accessible Bootstrap tooltips')
+    
+    script(async='', src='https://static.codepen.io/assets/embed/ei.js')
+
+

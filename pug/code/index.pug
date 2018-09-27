@@ -1,0 +1,48 @@
+extends ../templates/landing.pug
+
+block title
+    |Code
+block head
+
+block breadCrumbs
+    +breadcrumbCodePage
+
+block icon
+    +fa('code', 'fa-5x')
+block intro
+    p My day job is that of a web developer.  Below are a list of my more generic accessible code snippets.  There may not be a lot here yet, but I will slowly add them as time goes on.
+
+    p Feel free to use the snippets in your own projects.
+
+block content
+    h2 List of code snippets
+    ul
+        li
+            
+            a(href="links.html") Text link styling
+            p Change the default underlining of links so it is more accessible to all users.
+        
+        li
+            a(href="styleBookmarklet.html") Text spacing bookmarklet
+            p Bookmarklet that makes text easier to read for dyslexics and makes testing WCAG 2.1's text spacing success criteria easier.
+
+        li
+            a(href="bs4_modal.html") Bootstrap 4 Modal
+            p Modify Boostrap 4 modals to return a user to the item that opened the modal.
+
+        li
+            a(href="bs4_tooltips.html") Bootstrap 4 Tooltips
+            p Modify Boostrap 4 tooltips to comply with WCAG 2.1.
+
+        li
+            a(href="bs4_tabs.html") Bootstrap 4 Tabs
+            p Modify Boostrap 4 tabs to use the arrow keys.
+
+        li
+            +externalLink('../assets/javascript/skipto.min.js') SkipTo plugin
+            p This is a modified version of the main SkipTo plugin that removes some false positives in WAVE.  #[+github('https://github.com/dobe0002/skipto') Kim's Fork of SkipTo]
+
+
+    
+block extraCode
+            

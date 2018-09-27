@@ -1,0 +1,32 @@
+extends main.pug
+
+block title
+    
+block headIncludes
+    +headIncludes('../')
+
+block head
+
+block breadCrumbs
+    +breadcrumbs('../')
+
+block contentContainer
+    .row
+        .col
+            h1
+                block title
+            .card
+                .card-body.row 
+                    .col-sm-2
+                        block icon
+                    .col
+                        block intro
+    block content
+block footer
+    +footer('../')
+    
+block bodyIncludes
+    +bodyIncludes('../')
+
+block extraCode
+            

@@ -1,0 +1,43 @@
+mixin breadcrumbs(pathToRoot)
+	- pathToRoot = pathToRoot || ''
+	- pathToHome = pathToRoot+"index.html"
+	nav.container(aria-label=Breadcrumbs)
+		ol.breadcrumb
+			li.breadcrumb-item
+				a(href=pathToHome)
+					+fa('home','')
+					|Home
+			block
+
+
+mixin breadcrumbLandingHome(icon,text,href,pathToRoot)
+	+breadcrumbs(pathToRoot)
+		li.breadcrumb-item
+			a(href=href)
+				+fa(icon,'') 
+				| #{text}
+		block
+ 
+mixin breadcrumbAboutPage
+	+breadcrumbLandingHome('info-circle','About','index.html','../')
+		if block
+			li.active.breadcrumb-item
+				block
+
+mixin breadcrumbPresentationPage
+	+breadcrumbLandingHome('chalkboard-teacher','Presentations','index.html','../')
+		if block
+			li.active.breadcrumb-item
+				block
+
+mixin breadcrumbCodePage
+	+breadcrumbLandingHome('code','Code','index.html','../')
+		if block
+			li.active.breadcrumb-item
+				block
+
+mixin breadcrumbToolsPage
+	+breadcrumbLandingHome('book','Documents and Tools','index.html','../')
+		if block
+			li.active.breadcrumb-item
+				block

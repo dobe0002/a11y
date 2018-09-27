@@ -1,0 +1,33 @@
+$body-bg: #333;
+$body-color: #e0e0e0;
+$link-color:#b1cadf;//#72abdf;//#7bacef;//#83b7ff;// #78b9ff;
+$link-hover-color:#449eff;
+$link-hover-decoration:none;
+$primary: #004a99;
+
+$breadcrumb-bg:$body-bg;
+
+$screen-md:768px;
+
+$card-bg: #6e5956;//#ad857d8a;
+$card-border-color:$card-bg;
+
+
+// fonts
+$font-family-sans-serif:"Open Sans", "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: "Poppins", Arial;
+
+
+main{
+    a{
+        border-bottom: 0.08em solid rgba( $link-color, .5 );
+        padding-bottom: .08em;
+        text-decoration: none;
+
+        &:hover{
+            border-bottom-color: $link-hover-color;
+        }
+    }
+
+}
+

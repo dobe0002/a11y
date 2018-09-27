@@ -1,0 +1,109 @@
+extends ../templates/landing.pug
+
+block title
+    |Presentations
+
+block head
+
+block breadCrumbs
+    +breadcrumbPresentationPage
+
+block icon
+    +fa('chalkboard-teacher', 'fa-5x')
+block intro
+    p.
+        Listing of my recent presentations and handouts. Feel free to explore use or reuse content, but please give credit when doing so by linking back to this page.
+    p.
+        Like what you see? Contact #[a(href="https://google.umn.edu/search?&btnG=Search&expertsearch=true&proxystylesheet=searchumn&client=searchumn&getfields=*&expertsearchexpand=true&expertsearchfrontend=searchumn&site=campus_tc&filter=1&q=zyciukwab") Kim] to inquire about training or presenting to your organization.
+    
+
+block content
+    h2 Accessibility a Team Approach
+    p.confDesc.
+        Many of us have heard that making our web applications accessible to wide variety of users including those with a disability is a good thing and for many of us it is required.  While we all have great intentions, web accessibility often falls through the cracks during our normal software development life cycle (SDLC) or software implementation.  In this session we will explore how this happens and how we can structure our teams to insure web accessibility is part of our web applications.
+
+    dl.row  
+        dt Conference
+        dd #[+externalLink("http://devops.umn.edu/") UMN DevOps]
+        dt Location
+        dd Minneapolis, MN
+        dt Date
+        dd May 17, 2018
+    p
+        +googleLink("https://z.umn.edu/KKD-DevOps-2018")
+            |Accessibility a Team Approach handout 
+
+
+    hr
+
+    h2 WAVE
+    p.confDesc.
+        This session will introduce DIY accessibility testing using the free WAVE tool. We'll discuss how to interpret accessibility warnings and errors, and how to fix them. This session is appropriate for people with any level of technical or writing skills. Bring your own laptop (and lunch!). 
+    dl.row  
+        dt Conference
+        dd UMN DIY Accessibility Lunch 'n Learn
+        dt Location
+        dd Minneapolis, MN
+        dt Date
+        dd April 24, 2018
+    p
+        +googleLink("https://z.umn.edu/kkd-a11y-wave")
+            |WAVE a Quick Start Guide 
+
+    hr
+
+    h2 Web Accessibility - What Do Web Professionals Say?
+    .confDesc
+        p There are many assumptions for why web developers, designers, and content providers don’t always account for web accessibility. When trying to assist web professionals using these assumptions, not a lot of progress was made.
+        
+        p Instead of trying the same old things, the presenter took a step back and asked web professionals themselves what are their barriers for implementing accessibility. Some of the results where far from what we expected.
+        
+        p In this session we will present assumptions that make implementing accessibility difficult, what web professionals say is preventing them from coding for accessibility and what are some possible approaches to support web professionals.
+
+    dl.row  
+        dt Conference
+        dd #[+externalLink("http://accessinghigherground.org/") Accessing Higher Ground]
+        dt Location
+        dd Westminster, CO
+        dt Date
+        dd November 15 - 17, 2017
+    p
+        +googleLink("https://docs.google.com/document/d/1PGBLJ26AEzMTzvmALzd0krD7E8nYJ6GVhWcz6quoXgg/")
+            |Web Professionals and Accessibility handout
+
+    hr
+
+    h2 You Can Do This. Web Accessibility Testing for Everyone.
+    .confDesc
+        p The first step in building or maintaining an accessible web site or application is identifying accessibility issues. Yet accessibility testing is something that feels overly complicated, requires special expertise, or is time-consuming. It doesn’t have to be. Really. Come find out how.
+
+        p In this session, we will demonstrate simple checks for accessibility that can be easily integrated into your web development process including the use of free easy-to-use tools. In addition we will discuss what types of checks should be done at certain points while developing or updating a web site or application to catch a majority of web accessibility issues.
+
+        p Getting into the habit of checking or web accessibility, like all good habits, can be hard. Checking for accessibility doesn’t do a lot of good unless you check often, so we will discuss possible tactics you and your team can take to insure accessibility is checked for over the long run.
+    dl.row  
+        dt Conference
+        dd #[+externalLink("http://minnewebcon.org/") MinneWebCon]
+        dt Location
+        dd Minneapolis, MN
+        dt Date
+        dd May 1, 2017
+    p
+        +googleLink("https://docs.google.com/document/d/1sXs58A_Mw_6BhR1cMYX57gkYG-dR4y2nz-n6JQRWNu4/")
+            |Web Accessibility Testing handout
+
+
+
+    hr
+    hr
+
+
+
+
+    h2 Where are the slides?
+    p As you may have observed, I haven't provided links to my slides.  There are a couple of reasons - first I use #[+externalLink("https://slides.com/") Slides] which I love as a presentation tool, but the presentations themselves are not accessible.
+    p Secondly, the slides are not meant to be used as handouts.  Powerpoint and other presentation tools are a lousy format for a lot of information at once.  If you have seen my sessions, I tend to go through a lot of information.
+    p Following the thinking of #[+externalLink("https://www.edwardtufte.com/tufte/powerpoint") Edward Tufte], I have instead create an electronic handout which better presents the information in a session.
+    p As you may have also noticed, I use #[+externalLink("https://www.google.com/docs/about/") Google Docs] rather heavily.  Google docs isn't the perfect application and its accessibility is so-so (but "good enough" for the University of Minnesota).  With that said, having handouts in Google Docs insures that it can print nice and participants can easily copy the handout and do with it as they like.
+
+block extraCode
+            

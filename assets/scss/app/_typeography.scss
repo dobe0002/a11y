@@ -1,0 +1,49 @@
+
+
+// Spacing
+
+* {letter-spacing: 0.03em !important} /* Letter spacing */
+* {word-spacing: 0.16em !important;} /* Word spacing */
+
+a{
+    // see the _bootstrapOverride.scss file
+}
+
+dl{
+    &.row{
+        margin-left:20px;
+    };
+        dt{
+        &:after{
+            content:":"
+        }
+    }
+}
+
+.confDesc{
+    margin-left:20px;
+    font-style: italic;
+    color:#c0c0c0;
+}
+
+
+hr{
+    margin-top:50px;
+    margin-bottom:50px;
+    border-top:1px solid $mauve;
+}
+
+
+main{
+    h2{
+        margin-top:30px
+    }
+    h3{
+        margin-top:30px
+    }
+    ul{
+        li{
+            margin-bottom:25px
+        }
+    }
+}

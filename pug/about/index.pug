@@ -1,0 +1,82 @@
+extends ../templates/landing.pug
+
+block title
+    |About
+
+block head
+
+block breadCrumbs
+    +breadcrumbAboutPage
+
+block icon
+    img.img-fluid.rounded(src='../assets/images/kkd.png')
+block intro
+    p.
+        This site was created to contain the accessibility work done by Kim Doberstein - University of Minnesota.  Feel free to use items on this site in your own work or project.
+
+    p.
+        Feel free to contact me. My email is available on the #[a(href="https://google.umn.edu/search?&btnG=Search&expertsearch=true&proxystylesheet=searchumn&client=searchumn&getfields=*&expertsearchexpand=true&expertsearchfrontend=searchumn&site=campus_tc&filter=1&q=zyciukwab") UofM staff directory page]
+
+    p.
+        This page contains a little bit more about me and what drives me.
+
+block content
+    h2 Bio
+    p.
+        Kim has been a developer at the University of Minnesota for over 14 years working on projects big and small. 
+        Until recently changing over to full-stack Nodejs development, her main technical roles included UX design, building accessible UIs and font end development.
+
+    p.
+        She also has a background in instructional design, project management, and business analysis.  She taught at both the high school (physics), professional (instructional design) and college level (web design) but her favorite task was to introduce preschoolers to computer programming. 
+        She is a University of Minnesota graduate with undergraduate degrees in physics and astronomy (with additional emphasis on chemistry and history of science) and completed advanced coursework in curriculum and instruction along with instructional design for online learning.
+
+    p.
+        When Kim isn’t slinging code she runs 5Ks (although she really doesn't like running that much), outdoor photography, watching Gopher hockey and is usually found giggling with her daughters.
+      
+
+    h2 Why accessibility?
+    p.
+        Over the years, I've found that many folks become involved in the web accessibility community for a lot of different reasons.  For many it is stemming from personal experiences.  
+        For others, it might be from an advocacy perspective.  Others are involved motivated by legal impacts.  
+        I feel that all of these (and others) are valid, but they happen to be different than my motivations.
+
+    p.
+        I have always been a strong #[a(href="https://en.wikipedia.org/wiki/User-centered_design") User Centered Design] advocate.  The core of UCD is the end users and all the glorious flavors they come in.
+        I found it very problematic that many UCD folks talked about users with disabilities and/or users of assistive technologies as separate than the "normal" end users.  
+        These folks ARE part of our end users and should not be treated as separate.  At heart, I dont' believe accessibility should be a separate "thing" beyond normal development, design, or UX - 
+        but I've found that many folks aren't ready for that yet, so I (begrudgingly) continue to use the term accessibility.
+ 
+    p.
+        I've also been an advocate of standards-driven development while creating code that is easy to maintain.  Professionals use standards.  Professionals write easy-to-maintain code.
+        Accessible code is both standards based, and usually easier to maintain.  Again, accessibility shouldn't be a separate skill, but something 
+        that, we as professionals, just do.  Period.
+
+    p.
+        I realise that we all aren't there yet and that is OK as long as we move forward. That is why I am here spending many late nights trying to help folks grow.  
+        I know there are many folks in the accessibility community that would shame folks for not knowing enough about accessibility 
+        or try to "one up" others with their accessibility skills.  I, on the other hand, am exited when folks 
+        want to learn more.  No shame, no "one upping", not threatened by other's abilities.
+
+    h2 My definition of accessibility
+    p.
+        There are many definitions of what it means when a web site or web application is accessible. 
+        I do like the #[a(href="https://webaim.org/articles/pour/") POUR principles], but have tweaked it a little bit to form my own definition:
+
+    blockquote.blockquote
+        |Web accessibility means that all users regardless of technology can:
+        ul
+            li perceive
+            li understand
+            li navigate
+            li interact
+            li and contribute to
+        |the web.
+
+    p.
+        I have heard numerous definitions over the years.  Many of them, I would consider, incomplete.  This isn't to say that folks who have said them are uninformed or of less intellegence.
+        Instead, I think folks are just trying to wrap their heads this whole accessibility thing and have just started on their own journy.  
+
+
+
+block extraCode
+            

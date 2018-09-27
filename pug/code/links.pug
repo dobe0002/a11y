@@ -1,0 +1,55 @@
+extends ../templates/code_preview.pug
+
+block title
+    |Links
+block head
+    style.
+        #main_text{
+            background-color: #fff;
+            padding: 15px;
+        }
+
+
+block intro
+    p.
+        The default underlining of links isn't acccessilble to users with reading difficulties an dyslexics.  Some custom css will underline the link in a way that is better for all users.
+
+block content
+    h2 Description
+    p The #[+externalLink("https://www.w3.org/TR/WCAG20/") WCAG 2.0 AA] requires links that are in normal text must have a non-color designator to distinguish them from other surrounding text. The purpose of a non-color designator is to allow users who have color-blindness to easily recognize links.
+
+    p There is an exception if you happen pick the perfect mix of colors, but that would be nearly impossible with most designs. See #[+externalLink("http://webaim.org/blog/wcag-2-0-and-link-colors/") WebAim's article on link colors].
+
+    p Most designers and developers will underline these links.  This satisfies the WCAG 2.0 AA, but does pose a substantial accessibility issue.  The way browsers underline links, make the text more difficult for most visual users, but makes it almost impossible for some persons with reading difficulties and dyslexia.
+
+    p There are two reasons why underlined text is difficult to read.  First the underline itself is the same "weight" and color as the main text.  Secondly the underline is too close to the letters and letters with descenders (like the "tail" in the letter "y") fall below the line.
+
+    p Using CSS, we will remove the underlining of links and add a bottom border that will fall below the descenders and have a slightly fainter color.  Here is an example of the two links:
+                  
+    ul
+        li
+            a(href="#" style="text-decoration:underline; border-bottom:none").normalLink Normal link styling
+        li
+            a(href="#") Link with new styling
+
+block css
+    .
+        #main_text a{
+            color:#3072ab;
+            border-bottom: 0.08em solid #d5d5d5;
+            padding-bottom: .08em;
+            text-decoration: none;
+        }
+        #main_text a:hover{
+            border-color:#3072ab;
+        }
+
+block javascript
+
+block html
+    #main_text
+        a(href="#") Here is my newly styled link.
+
+    
+block extraCode
+   

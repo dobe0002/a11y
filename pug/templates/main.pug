@@ -1,0 +1,42 @@
+include ../mixins/headerFooterIncludes.pug
+include ../mixins/general.pug
+include ../mixins/breadcrumb.pug
+
+doctype html  
+html(lang='en')  
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        title 
+            block title
+            | - Kim's Accessibility Site
+            
+        block headIncludes
+            +headIncludes('')
+
+        block head
+    body
+        header.container
+            .row 
+                .col.text-right
+                    .h4 Web accessibility 
+                        span.d-none.d-sm-inline for everyone
+
+        block breadCrumbs
+            +breadcrumbs('')
+        main.container
+            block contentContainer
+
+        block footer
+            +footer('')
+
+        block bodyIncludes
+            +bodyIncludes('')
+
+        block extraCode
+
+        script.
+            $('dl dt').addClass('col-sm-2')
+            $('dl dd').addClass('col-sm-10')
+            

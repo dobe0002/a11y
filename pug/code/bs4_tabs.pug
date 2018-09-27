@@ -1,0 +1,34 @@
+extends ../templates/code_embed.pug
+
+block title
+    |Bootstrap 4 Tabs
+block head
+
+
+block intro
+    p.
+        Out of the box, Bootstrap 4 bas are not compliant with WCAG 2.0.  This jQuery based script fixes these issues.
+    
+block content
+    h2 Description
+    p
+        |According to the 
+        a(href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel") ARIA authoring guide, 
+        |a user should only use the arrow keys to move between tabs.  Out of the box, BootStrap 4 tabs forces users to use the "tab" key to select the next tab.  
+    p.  
+        This script disables using the tab key to get to the next tab and instead allows the user to use the arrow keys.
+    p.  
+        Using the arrow key may be confusing for some visual users, so a message notifying them how to use the tabs would be beneficial.      
+    h2 Requirements
+    ul
+        li Bootstrap 4 JavaScript
+        li Bootstrap 4 CSS
+        li jQuery
+
+    h2 CodePen example:
+    p.codepen(data-height='510', data-theme-id='dark', data-slug-hash='VGNJjw', data-default-tab='js,result', data-user='kimdobie', data-pen-title='Accessible Bootstrap tabs')
+   
+    script(async='', src='https://static.codepen.io/assets/embed/ei.js')
+
+
+

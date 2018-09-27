@@ -1,0 +1,32 @@
+extends code.pug
+
+block title
+
+block head
+block content
+block code
+    h2.codeHeader Code
+    #code_prisim
+
+    h3#headPreview Preview
+    #htmlExample(data-language="language-html" data-language-label="HTML")
+        block html
+
+    style#cssExample(data-language="language-css" data-language-label="CSS")
+        block css
+    
+    script#javascriptExample(data-language='language-javascript' data-language-label="Javascript")
+        block javascript
+    
+
+
+
+block embed
+
+
+block bodyIncludes
+    +bodyIncludes('../')
+    +code('../')
+    
+
+block extraCode

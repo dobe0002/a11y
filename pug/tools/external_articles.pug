@@ -1,0 +1,38 @@
+extends ../templates/landing.pug
+
+block title
+    |External Articles
+block head
+
+block breadCrumbs
+    +breadcrumbToolsPage External Articles
+
+block icon
+    +fa('wrench', 'fa-5x')
+block intro
+    p.
+        There are a lot of articles about accessibility on the web, but below are a few the pages/articles that have influenced my approach to accessibility.
+
+block content
+   
+    h2 Coding practices
+
+    p
+        +externalLink('https://www.w3.org/TR/wai-aria-practices-1.1/') WAI-ARIA Authoring Practices
+    p
+        +externalLink('https://webaim.org/techniques/alttext/') WebAIM - Alternative Text
+
+    
+    h2 Team approach/practices
+
+    p
+        +externalLink('http://simplyaccessible.com/article/five-stages-of-accessibility/') Five stages of accessibility
+
+    p
+        +externalLink('http://www.weboverhauls.com/web_axe_podcast/transcripts/93.htm') Web Axe interview with Katherine Lynch about 5 Teaching Mistakes Accessibility Advocates Make
+
+    p 
+        +externalLink('https://docs.google.com/document/d/1L9OYaP052j2uxVu-8IXGxzwQsHdx8G6YKrxpHo7BZ_w/edit') A11Y Wars: The Accessibility Interpretation Problem
+
+block extraCode
+            

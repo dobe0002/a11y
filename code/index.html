@@ -1,0 +1,83 @@
+<!DOCTYPE html  >
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title> Code- Kim's Accessibility Site
+    </title>
+    <link href="../assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../assets/css/app.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="row"> 
+        <div class="col text-right">
+          <div class="h4">Web accessibility <span class="d-none d-sm-inline">for everyone</span></div>
+        </div>
+      </div>
+    </header>
+    <nav class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home " title=""></i>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-code " title=""></i>Code</a></li>
+      </ol>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Code
+          </h1>
+          <div class="card">
+            <div class="card-body row"> 
+              <div class="col-sm-2"><i class="fas fa-code fa-5x" title=""></i>
+              </div>
+              <div class="col">
+                <p>My day job is that of a web developer.  Below are a list of my more generic accessible code snippets.  There may not be a lot here yet, but I will slowly add them as time goes on.</p>
+                <p>Feel free to use the snippets in your own projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>List of code snippets</h2>
+      <ul>
+        <li><a href="links.html">Text link styling</a>
+          <p>Change the default underlining of links so it is more accessible to all users.</p>
+        </li>
+        <li><a href="styleBookmarklet.html">Text spacing bookmarklet</a>
+          <p>Bookmarklet that makes text easier to read for dyslexics and makes testing WCAG 2.1's text spacing success criteria easier.</p>
+        </li>
+        <li><a href="bs4_modal.html">Bootstrap 4 Modal</a>
+          <p>Modify Boostrap 4 modals to return a user to the item that opened the modal.</p>
+        </li>
+        <li><a href="bs4_tooltips.html">Bootstrap 4 Tooltips</a>
+          <p>Modify Boostrap 4 tooltips to comply with WCAG 2.1.</p>
+        </li>
+        <li><a href="bs4_tabs.html">Bootstrap 4 Tabs</a>
+          <p>Modify Boostrap 4 tabs to use the arrow keys.</p>
+        </li>
+        <li><a href="../assets/javascript/skipto.min.js" target="_blank">SkipTo plugin <i class="fas fa-external-link " title="(new window)"></i></a>
+          <p>This is a modified version of the main SkipTo plugin that removes some false positives in WAVE.  <a href="https://github.com/dobe0002/skipto" target="_blank">Kim's Fork of SkipTo <i class="fab fa-github " title="on Github"></i></a>
+          </p>
+        </li>
+      </ul>
+    </main>
+    <footer><small>
+         By Kim Doberstein  - <a href="../about/index.html">About Kim</a></small></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="../assets/fontAwesome5/js/fontawesome-all.min.js"></script>
+    <script src="../assets/javascript/skipto.min.js"></script>
+    <!-- script(src=pathToJS)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({google: {families: ['Open Sans', 'Roboto', 'Poppins']} });
+      
+    </script>
+    <script>
+      $('dl dt').addClass('col-sm-2')
+      $('dl dd').addClass('col-sm-10')
+    </script>
+  </body>
+</html>

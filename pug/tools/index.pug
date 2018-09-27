@@ -1,0 +1,54 @@
+extends ../templates/landing.pug
+
+block title
+	|Documents and tools
+block head
+
+block breadCrumbs
+	+breadcrumbToolsPage
+
+block icon
+	+fa('book', 'fa-5x')
+block intro
+	p.
+		Accessibility testing and coding is hard, the right tools can make it much easier!  
+
+	p.
+		Showcase for tools created by Kim including quick start guides, how-tos, testing helpers and code snippets. 
+		Looking for more?  See a collection of Kim's favorite tools.  
+
+block content
+	h2 Quick start guides
+	p Documents to guide you into testing for accessibility.
+
+	ul
+		li 
+			+googleLink('https://z.umn.edu/kkd-a11y-wave') Quick-start guide to WAVE 
+		li
+			+googleLink('https://z.umn.edu/kkd-a11y-forms') Quick-start guide to HTML forms
+		li
+			+googleLink('https://z.umn.edu/kkd-a11y-testing') Web accessibility testing (master document)
+
+	hr
+	h2 Process
+	p Documents to help change team culture, attitudes, or process to incorporate accessibility.
+	ul
+		li
+			+googleLink('https://z.umn.edu/KKD-DevOps-2018') Accessibility - A team approach
+		li
+			+googleLink('https://docs.google.com/document/d/1PGBLJ26AEzMTzvmALzd0krD7E8nYJ6GVhWcz6quoXgg/edit#heading=h.ua4viwhg289v') Web accessibility - What do developers say?
+
+
+	//- h2 Testing templates and docs
+
+	//- h2 External
+	//-  p The web is a wonderful knowledge store and there isn't a need to "re-invent" the wheel.
+	//-ul
+		li
+			a(href="") External articles
+		li
+			a(href="") External tools
+
+	
+block extraCode
+			

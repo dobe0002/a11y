@@ -1,0 +1,81 @@
+<!DOCTYPE html  >
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title> Bootstrap 4 Tooltips- Kim's Accessibility Site
+    </title>
+    <link href="../assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../assets/css/app.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="row"> 
+        <div class="col text-right">
+          <div class="h4">Web accessibility <span class="d-none d-sm-inline">for everyone</span></div>
+        </div>
+      </div>
+    </header>
+    <nav class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home " title=""></i>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-code " title=""></i>Code</a></li>
+        <li class="active breadcrumb-item">Bootstrap 4 Tooltips
+        </li>
+      </ol>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Bootstrap 4 Tooltips
+          </h1>
+          <div class="card">
+            <div class="card-body row"> 
+              <div class="col-sm-2"><i class="fas fa-code fa-5x" title=""></i>
+              </div>
+              <div class="col">
+                <p>
+                  Out of the box, Bootstrap 4 tooltips are not compliant with WCAG 2.0.  This jQuery based script fixes these issues.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Description</h2>
+      <p>According to <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">WCAG 2.1, success criteria 1.4.13</a>, tooltips must stay open if a user hovers over the top of the tooltip.  In addition, the user must be able to hide the tooltip without moving the mouse or changing focus.</p>
+      <h2>Requirements</h2>
+      <ul>
+        <li>Bootstrap 4 JavaScript</li>
+        <li>PooperJS</li>
+        <li>Bootstrap 4 CSS</li>
+        <li>jQuery</li>
+      </ul>
+      <h2>CodePen example:</h2>
+      <p class="codepen" data-height="510" data-theme-id="dark" data-slug-hash="mGQWqJ" data-default-tab="js,result" data-user="kimdobie" data-pen-title="Accessible Bootstrap tooltips"></p>
+      <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </main>
+    <footer><small>
+         By Kim Doberstein  - <a href="../about/index.html">About Kim</a></small></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="../assets/fontAwesome5/js/fontawesome-all.min.js"></script>
+    <script src="../assets/javascript/skipto.min.js"></script>
+    <!-- script(src=pathToJS)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({google: {families: ['Open Sans', 'Roboto', 'Poppins']} });
+      
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
+    <script src="../assets/prism/prism.js"></script>
+    <link href="../assets/css/prism-complete.css" rel="stylesheet"/>
+    <script src="../assets/javascript/code.js"></script>
+    <script>
+      $('dl dt').addClass('col-sm-2')
+      $('dl dd').addClass('col-sm-10')
+    </script>
+  </body>
+</html>

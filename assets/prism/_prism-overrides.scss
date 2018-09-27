@@ -1,0 +1,11 @@
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f94e8c;
+}
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: #8092a4;
+}
+

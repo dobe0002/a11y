@@ -1,0 +1,55 @@
+extends ../templates/code.pug
+
+block title
+    |Bootstrap 4 Modal
+block head
+    script(src="https://rawgit.com/dobe0002/a8e542ef81ffae3a14cf6e04f7a188c7/raw/40d4edfb40e442482fc0446e99507ac4b85f40e1/um_bs_modal.js")
+    style.
+        main button:focus{
+            border:#f00 3px dashed;
+        }
+
+block intro
+    p.
+        Out of the box, there appears to be a few issues with the accessibility of the Bootstrap 4 modals.  This jQuery based script fixes these issues and makes calling the modal easier.
+
+block content
+    h2 Description
+    p When a user closes a modal, they should be brought back to the item (link, button, etc.) that initiated the opening of the modal window.  When using javascript to open a modal window, the initiating item appears to be lost and the user is returned to the top of the page when the modal is closed.
+
+    p This script does three things. First it adds the modal HTML if it doesn't already exist.  Secondly it creates an easier way to set the modal content.  Lastly it keeps track of the item that initiated the opening of the modal and returns the user to the item.
+
+    h2 Requirements
+    ul
+        li Bootstrap 4 JavaScript
+        li Bootstrap 4 CSS
+        li jQuery
+
+    h2 Main Code
+    p The code for this library was a little too long to have on this page, so it is hosted on GitHub as a gist.  
+    p 
+        +externalLink("https://gist.github.com/dobe0002/a8e542ef81ffae3a14cf6e04f7a188c7")
+            |um_bs_modal.js
+
+
+
+block javascript
+    .
+        $('#myModalButton').on('click', event => {
+            let $this= $(event.target)
+            um_bs_modal({
+                'body': 'Cat ipsum dolor sit amet, jaguar or birman and cougar cheetah. Grimalkin american shorthair ocelot puma. Havana brown bengal so balinese kitty'
+                , 'title': 'Cat Ipsum'
+                , 'footer': 'visit <a href="http://www.catipsum.com/">cat ipsum</a>'
+                , 'size': 'medium'
+                , 'openButton': $this
+                })
+        });
+
+
+block html
+    p
+        button#myModalButton Open modal
+   
+block extraCode
+    +modal
