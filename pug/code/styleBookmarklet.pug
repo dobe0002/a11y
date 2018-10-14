@@ -1,57 +1,67 @@
 extends ../templates/code_preview.pug
 
 block title
-    |Spacing Bookmarklet
+	|Spacing Bookmarklet
 block head
-    style.
-        #javascriptExample{display:none}
-        #headPreview{display:none}
+	style.
+		 #javascriptExample{display:none} 
+		#headPreview{display:none}
 
 block intro
-    p.
-        WCAG 2.1 success criteria 1.4.12 states that the content on your page or applications should still be visible after changing the text spacing. 
-        This bookmarket will automatically add the text spacing to the page.
+	p.
+		WCAG 2.1 success criteria 1.4.12 states that the content on your page or applications should still be visible after changing the text spacing. 
+		This bookmarket will automatically add the text spacing to the page.
 
+block gitHubLink
+	p 
+		+github('https://gist.github.com/dobe0002/151b69e93a74ce5a087d96d70aee07bb') View code on Github
+		
 block content
-    h2 Description
-    p This is simple bookmark will apply the CSS listed at the bottom of this page.  To add the bookmarklet to your browser: drag the following button to your bookmark or favorite bar:
+	h2 Description
+	p This is simple bookmark will apply the CSS listed at the bottom of this page increasing the text spacing (on most pages).
 
-    p.button-row
-        a.btn.btn-secondary#bookmarklet(href="")
-            | Text spacing
+	p.button-row
+		a.btn.btn-secondary#bookmarklet(href="")
+			| Text spacing bookmarklet
 
+	+bookmarkInstillation
 
-    div#cssExample(data-language="language-css" data-language-label="CSS" style="display:none").
-        * { line-height:1.5em !important} /* Line spacing */
-
-        p {margin-bottom:2em !important} /* Paragraph spacing */
-
-        * {letter-spacing: 0.12em !important} /* Letter spacing */
-
-        * {word-spacing: 0.16em !important;} /* Word spacing */
-            
+	
 
 
-    div#javascriptExample(data-language='language-javascript' data-language-label="Javascript").
-        javascript:(function(){
-            var style = document.createElement('style');
-            style.type = 'text/css';
-            style.innerHTML = '* { line-height:1.5em !important} p {margin-bottom:2em !important} * {letter-spacing: 0.12em !important} * {word-spacing: 0.16em !important;} ';
-            document.getElementsByTagName('head')[0].appendChild(style);
+	div#cssExample(data-language="language-css" data-language-label="CSS" style="display:none").
+		* { line-height:1.5em !important} /* Line spacing */
 
-            var div = document.createElement('div');
-            div.style='position: fixed; background-color: #000000b3; left: 50%; transform: translateX(-50%); top: 0; font-size: 1em; padding: 10px; border-radius: 10px; color: #fff;';
-            div.innerHTML = 'Spacing style applied';
-            document.getElementsByTagName('body')[0].appendChild(div);
-          })();
+		p {margin-bottom:2em !important} /* Paragraph spacing */
+
+		* {letter-spacing: 0.12em !important} /* Letter spacing */
+
+		* {word-spacing: 0.16em !important;} /* Word spacing */
+			
 
 
-    
+	div#javascriptExample(data-language='language-javascript' data-language-label="Javascript").
+		
 
-      
+
+	
+
+	  
  
 
-    
+	
 block extraCode
-    script.
-        $('#bookmarklet').attr('href',"javascript:(function(){var style = document.createElement('style');style.type = 'text/css';style.innerHTML = '* { line-height:1.5em !important} p {margin-bottom:2em !important} * {letter-spacing: 0.12em !important} * {word-spacing: 0.16em !important;} ';document.getElementsByTagName('head')[0].appendChild(style);var div = document.createElement('div');div.style='position: fixed; background-color: #000000b3; left: 50%; transform: translateX(-50%); top: 0; font-size: 1em; padding: 10px; border-radius: 10px; color: #fff;';div.innerHTML = 'Spacing style applied';document.getElementsByTagName('body')[0].appendChild(div);})();")
+	script.
+		getGistFile('151b69e93a74ce5a087d96d70aee07bb','spacing_bookmarklet.js',(code)=>{
+			$('#javascriptExample').html(code)
+			$('#bookmarklet').attr('href',code)
+			setCodeExamples();
+			Prism.highlightAll();
+		})
+
+
+	
+
+
+
+		

@@ -1,5 +1,23 @@
+// Pull gist code via ajax
+
+
+function getGistFile (gist, filename, cb) {
+	$.ajax({
+		url: 'https://api.github.com/gists/' + gist,
+		method: 'GET',
+		dataType: 'jsonp'
+	}).done( function(gistdata) {
+		var content = gistdata.data.files[filename].content;
+		cb(content)
+	})
+}
+	
+
+
 /// Copy code from specified tabs and paste it into the prisim divs
 function setCodeExamples(){
+
+	
 
 	var html="";
 	$('*[data-language]').each(function(){
@@ -17,7 +35,23 @@ function setCodeExamples(){
     $('#code_prisim').html(html);
     if(html==""){
         $('#headPreview').hide();
-    }
+	}
+	
+	setTimeout(function(){
+		$('.code-toolbar').attr('tabindex','0').addClass('prismButtonListenerAdded');
+		$(document).on('click','.code-toolbar .toolbar-item a',function(){
+			$(this).parents('.code-toolbar:first').focus();
+		})
+		$('.code-toolbar .toolbar-item a').attr('tabindex','0').attr("href","javascript:void(0)").attr('role','button');
+		$('.code-toolbar').focusin(function(){	
+			$(this).find('.toolbar').css('opacity','1')
+		})
+		$('.code-toolbar').focusout(function(){
+			$(this).find('.toolbar').removeAttr('style')
+		})
+	},200)
+	
+
 }
 
 

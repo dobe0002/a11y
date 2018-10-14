@@ -13,7 +13,7 @@ mixin github(href, extraClasses)
     a(href= href target="_blank" class= extraClasses)
         block
         | 
-        +fa('github',extrClasses,'on Github','fab')
+        +fab('github',extrClasses,'')
 
 mixin externalLink(href, extraClasses)
     - extraClasses = extraClasses || ''
@@ -29,3 +29,20 @@ mixin googleLink(href,extraClasses)
         block
         | 
         +fab('google-drive',extraClasses,'(Google Doc)')
+
+mixin bookmarkInstillation()
+    hr
+    h3 Add a bookmarklet
+    p To add the bookmarklet to your browser, drag the bookmarklet button above to your bookmark or favorite bar.
+    p To activate the bookmarklet on another webpage, just click the bookmarklet in the favorite bar.
+
+    h4 Note about Chrome (keyboard-only instillation)
+    p.
+        There is a defect in some versions of Chrome that doesn't allow you drag a bookmarklet into the favorite bar. 
+        To install a bookmarklet in Chrome:
+    ol
+        li Copy the javascript code.
+        li Under the "Bookmarks" menu, choose "Bookmark Manager".
+        li From the organize menu button to the right of the search box, choose "Add new bookmark".
+        li Add the bookmark title into the "name" field.
+        li Paste the javascript code into the "url" field.

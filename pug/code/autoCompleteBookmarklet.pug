@@ -1,0 +1,100 @@
+extends ../templates/code_preview.pug
+
+block title
+	|Autocomplete Identifier Bookmarklet
+block head
+	style.
+		 #javascriptExample{display:none} 
+		#headPreview{display:none}
+
+block intro
+	p.
+		WCAG 2.1 success criteria 1.3.5 states that the purpose of each text box should be noted in the code.  This is commonly done via the autocomplete attibute.
+		Unfortunately there isn't an easy way to determine if this attribute has been set without viewing the code.
+		This bookmarket will display the value of the autocomplete  attribute next to the text box.
+
+block gitHubLink
+	p 
+		+github('https://gist.github.com/dobe0002/b2f1ba02e88646e458c5e51cbbc4b379') View code on Github
+		
+block content
+	h2 Description
+	p This is simple bookmark will display the value of the autocomplete values so you don't have to view the HMTL code. 
+
+	p.button-row
+		a.btn.btn-secondary#bookmarklet(href="")
+			| Autocomplete identifier bookmarklet
+
+	+bookmarkInstillation
+
+	
+
+
+
+	div#javascriptExample(data-language='language-javascript' data-language-label="Javascript").
+
+block embed	
+	hr
+	h2 Sample form 
+	<form action="#">
+		<fieldset>
+			<legend>Billing address</legend>
+			<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="example1WorkFirstName">First Name</label>
+			<div class="col">
+				<input class="form-control" type="text" id="example1WorkFirstName" autocomplete="section-test billing given-name">
+			</div>
+			</div>
+			<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="example1WorkLastName">Last Name</label>
+			<div class="col">
+				<input class="form-control" type="text" id="example1WorkLastName" autocomplete="section-test billing family-name">
+			</div>
+			</div>
+			<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="example1WorkStreet">Street</label>
+			<div class="col">
+				<input class="form-control" type="text" id="example1WorkStreet" autocomplete="section-test billing address-line1">
+			</div>
+			</div>
+			<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="example1WorkCity"> City</label>
+			<div class="col">
+				<input class="form-control" type="text" id="example1WorkCity" autocomplete="section-test billing address-level2">
+			</div>
+			</div>
+			<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="example1WorkState">State</label>
+			<div class="col">
+				<input class="form-control" type="text" id="example1WorkState" autocomplete="section-test billing address-level1">
+			</div>
+			</div>
+			<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="example1WorkZip">Zip Code</label>
+			<div class="col">
+				<input class="form-control" type="text" id="example1WorkZip" autocomplete="section-test billing postal-code">
+			</div>
+			</div>
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</fieldset>
+		</form>
+ 
+
+	
+block extraCode
+	script.
+		getGistFile('b2f1ba02e88646e458c5e51cbbc4b379','autocomplete_identify_bookmarklet',(code)=>{
+			$('#bookmarklet').attr('href',code)
+			code=code.replace(/</g,"&lt;");
+			code=code.replace(/>/g,"&gt;");
+			$('#javascriptExample').html(code)
+			setCodeExamples();
+			Prism.highlightAll();
+		})
+
+
+	
+
+
+
+		

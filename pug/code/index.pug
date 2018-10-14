@@ -15,16 +15,11 @@ block intro
     p Feel free to use the snippets in your own projects.
 
 block content
-    h2 List of code snippets
+    h2 Code snippets
     ul
         li
-            
             a(href="links.html") Text link styling
             p Change the default underlining of links so it is more accessible to all users.
-        
-        li
-            a(href="styleBookmarklet.html") Text spacing bookmarklet
-            p Bookmarklet that makes text easier to read for dyslexics and makes testing WCAG 2.1's text spacing success criteria easier.
 
         li
             a(href="bs4_modal.html") Bootstrap 4 Modal
@@ -42,7 +37,17 @@ block content
             +externalLink('../assets/javascript/skipto.min.js') SkipTo plugin
             p This is a modified version of the main SkipTo plugin that removes some false positives in WAVE.  #[+github('https://github.com/dobe0002/skipto') Kim's Fork of SkipTo]
 
+    hr
 
+    h2 Bookmarklets
+    ul
+        li
+            a(href="styleBookmarklet.html") Text spacing bookmarklet
+            p Bookmarklet that makes text easier to read for dyslexics and makes testing WCAG 2.1's text spacing success criteria easier.
     
+        li
+            a(href="autoCompleteBookmarklet.html") Autocomplete identifier bookmarklet
+            p Bookmarklet that displays the autocomplete attribute making testing WCAG 2.1's input purpose success criteria easier.
+
 block extraCode
             
