@@ -10,10 +10,11 @@ mixin fab(type,extraClasses,title)
 
 mixin github(href, extraClasses)
     - extraClasses = extraClasses || ''
+    - extraClasses +=" presentationRole"
     a(href= href target="_blank" class= extraClasses)
         block
         | 
-        +fab('github',extrClasses,'')
+        +fab('github',extraClasses,'')
 
 mixin externalLink(href, extraClasses)
     - extraClasses = extraClasses || ''
